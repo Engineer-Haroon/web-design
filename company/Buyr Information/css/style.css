@@ -1,0 +1,102 @@
+body{
+    background-image: url(imag.jpg);
+ /*ackground: skyblue;*/
+    margin: 0 ;
+    padding: 0;
+    font-family: sans-serif;
+    background-repeat: round;
+    background-size: cover;
+}
+
+
+input[type=text]{
+    padding: 7px;
+    border: none ;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+button{
+    float: right ;
+    background: orange;
+    color: white ;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    position: relative;
+    padding: 7px;
+    font-family: sans-serif;
+    border: none;
+    font-size: 16px;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+   padding: 40px ;
+    background: rgba(0,0,0,.8) ;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.5); 
+    border-radius: 10px ;
+
+}
+
+.box h2{
+    color: #fff;
+    margin: 0 0 30px;
+    padding: 0;
+    text-align: center;
+      
+}
+
+.box .inputBox{
+    position: relative ;
+}
+.box .inputBox input{
+    width: 100%;
+    padding:  10px 0 ;
+    font-size: 16px;  
+    color: rgb(117,0,117);
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid orange;
+    border-radius: 24px;
+    text-align: center;
+   
+}
+    
+    
+}
+
+    
+    
+
+
+
+.box .inputBox input:focus ,
+.box .inputBox input:valid {
+    top: -18px;
+    left: 0;
+    color: black;
+    font-size: 12px;    
+}
+
+.box input[type="submit"]{
+    
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background:  orange;;
+    padding: 10px 20px ;
+    
+    border-radius: 10px ;
+    
+}
+
+
+
+
+
