@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/jobseeker.css" rel="stylesheet">
+    <script src="search.js"></script>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <title>Profile</title>
+
+</head>
+<body>
+
+    <div id="nav">
+        <nav class="navbar">
+            <div class="navbar" id="insidenav">
+             <ul class="nav navbar-nav">
+                <li> <a class="navbar-brand" href="index.html">Home</a></li>
+                <li class="active"><a href="#">Profile<span class="sr-only">(current)</span></a></li>
+                <li><a href="job-search.html">Job Search</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" name="keyword" id="keyword" class="form-control" placeholder="Search Jobs">
+                </div>
+                <button type="button" class="btn btn-default" onclick="search();">Search</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">                    
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+</div><!-- /.container-fluid -->
+
+<div class="container-fluid" id="content">
+
+    <aside class="col-sm-3" role="complementary">
+        <div class="region region-sidebar-first well" id="sidebar">
+         <h3 style="color: #009999" class="text-center" > Welcome </h3>
+     </div>
+
+     <!-- profile pic -->
+     <div class="thumbnail text-center">
+        <div class="img thumbnail">
+            <img src = 'images/employee2.jpg'>
+        </div>
+       <strong>Ahmed</strong>
+       <!-- Button trigger modal -->
+        <!--------------------------- profile pic --------------------------------------- -->
+                
+</div>
+<!-- profile pic -->
+
+</aside>
+<!------------------------------------------------------------------------------- -->
+<section class="col-sm-7">
+    <div id="searchcontent">
+        <!-- Search content overlay div starts here ------------------------------------ --- -->
+        <div id="header">
+            <h3> Find jobs, edit your profile or update your current resume for better jobs!</h3>
+        </div>
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#details">Your Profile</a></li>
+            <li><a data-toggle="tab"  href="#recjobs">Recommended Jobs</a></li>
+            <li><a data-toggle="tab" href="#resume">Update Resume</a></li>
+            <li><a data-toggle="tab" href="#advsearch">Advanced Search</a></li>
+        </ul>
+
+        <!------------------------------------------------------------------------------- -->
+
+        <div class="tab-content">
+
+            <!------------------------------------------------------------------------------- -->
+
+            <div id="details" class="tab-pane fade in active" style="margin-top: 50px;">
+                <h3> Your Profile</h3>
+                <table class="table" >
+                    <tr>
+                        <td class="tbold">Full Name:</td>
+                        <td>Ahmed Mohammed</td>
+
+                    </tr>
+                    <tr>
+                        <td class="tbold">Email:</td>
+                        <td>Ahmed.m@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td class="tbold">Phone:</td>
+                        <td>+967 xxx xxx xxx</td>
+                    </tr>
+                    <tr>
+                        <td class="tbold">Location:</td>
+                        <td>Jazan</td>
+                    </tr>
+                    <tr>
+                        <td class="tbold">Experience (Years):</td>
+                        <td>2 years</td>
+                    </tr>
+                    <tr>
+                        <td class="tbold">Skills:</td>
+                        <td>Software Engineering</td>
+                    </tr>
+                    <tr>
+                       <td class="tbold">UG Qualification:</td>
+                       <td>Computer Science</td>
+                   </tr>
+               </table>
+           </div> <!-- profile -->
+           <!------------------------------------------------------------------------------- -->
+           <div id="recjobs" class="tab-pane fade" style="margin-top: 20px;">
+
+            <h3 style='color: #122b40; margin-top: 30px;'>No jobs are reccomended to you at this moment! </h3>
+        </table>
+    </div>
+
+    <!--------------------------------- Resume ---------------------------------------------- -->
+
+    <div id="resume" class="tab-pane fade">
+        <div>
+            <form action="../upload.?type=file" enctype="multipart/form-data" method="post">
+
+                <div class='alert alert-danger alert-dismissible' role='alert'>
+                    <button type='button' class='close'  data-dismiss='alert' aria-label='Close'><span
+                        aria-hidden='true'>&times;</span></button>
+                        <p style='font-size: 20px'><strong>Note:</strong> You have'nt uploaded a resume file yet! Upload a attractive resume file for a better job!</p>
+                    </div>
+
+                    <h4>Upload your updated resume file:</h4>
+                    <hr style="background-color: darkslateblue;">
+                    <div class="form-group" >
+                        <label class="form-group col-sm-3" for="file" style="font-size:16px; ">Select your resume file:</label>
+                        <div class="col-sm-7 form-inline">
+                         <input type="file" name="file" id="resumefile" class="form-control">
+                         <button class="btn btn-success" type="submit" name="submit" value="submit">Upload Resume</button>
+                     </div>
+                 </div>
+             </form>
+             <div class="page-header"></div>        
+             <br>
+
+         </div>
+     </div> <!-- resume -->
+     <!------------------------------------------------------------------------------- -->
+
+     <div id="advsearch" class="tab-pane fade">
+       <div class="container-fluid" id="advsearch" >
+           <h2>Search for jobs</h2>
+           <form role="form">
+              <table>
+                  <tr >
+                    <td class="tbold">Company Name:</td>
+                    <td><input type="text" class="form-control" id="company" name="company" required placeholder="Company Name:"> </td>
+                </tr>
+                <tr>
+                    <td class="tbold">Location:</td>
+                    <td>
+                      <input type="text" class="form-control" id="location" name="location" placeholder="Your Prefered Location">
+                  </td>
+              </tr>
+              <tr>
+                <td class="tbold">Job Title:</td>
+                <td><input type="text" class="form-control" id="desig" name="desig" required placeholder="Job Title/ Designation"></td>
+            </tr>
+            <tr>
+                <td class="tbold">Skills:</td>
+                <td><input type="text" class="form-control" id="skills" name="skills" required placeholder="Key Skills"></td>
+            </tr>
+            <tr>
+                <td class="tbold">Industy type:</td>
+                <td><input type = "text" class="form-control" id="industry" name="industry" placeholder="Industry Type"></td>  </tr>
+                <tr>
+                  <td></td>
+                  <td><button type="button" onclick="advsearch()" class="btn btn-success"><span class="glyphicon glyphicon-search"></span> Search Jobs</button></td>
+              </tr>
+          </table>
+      </form>
+  </div>
+  <hr>
+  <div id="subcontent">
+    <!---- sub content shows advanced search results --------- -->
+</div>
+</div>
+</body>
+
+</html>
